@@ -1,0 +1,77 @@
+.content {
+	margin: 2rem auto;
+}
+
+.list {
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	margin: .8rem 0;
+	background-color: rgba(234,29,44,1);
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.15);
+	width: 480px;
+}
+
+.item__header {
+	text-align: center;
+	padding: .4rem 0;
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #FFFFFF;
+	
+
+}
+.item__dispatcher, .item__receiver, .item__distance, .item__button {
+	font-size: 1rem;
+	background-color: #FFFFFF;
+	padding: .6rem 1rem;
+}
+
+.item__dispatcher, .item__receiver, .item__distance {
+	border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.item__button {
+	text-align: center;
+	padding: 1.2rem 0;
+	background-color: #FFFFFF;
+}
+
+.item::after {
+	display: block;
+	padding: .4rem 0;
+	text-align: center;
+	content: "-";
+	background-color: rgba(234,29,44,0.5);
+	color: #EA1D2C;
+	border-radius: 0 0 10px 10px;
+}
+
+.dispatcher__title, .receiver__title {
+	font-weight: 500;
+	margin-bottom: .3rem;
+}
+
+.distance__title {
+	display: inline;
+	font-weight: 500;
+}
+
+.dispatcher__name, .dispatcher__address,
+.receiver__name, .receiver__address, .shipment__distance, .shipment__kilometers {
+	color: #717171;
+}
+
+.dispatcher__name::after, .dispatcher__address::after,
+.receiver__name::after, .receiver__address::after, .shipment__kilometers::after {
+	content: ".";
+	color: #000;
+}

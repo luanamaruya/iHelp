@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="_template :: head"></head>
+<body>
+	<nav th:include="_template :: menu" class="menu"></nav>
+	<span class="message" th:text="${msg}" th:if="${msg != null}"></span>
+	<div class="alert" th:if="${param.error}">Login inválido!</div>
+	<div class="login__container">
+		<span class="title">Login</span>
+		<form class="form" th:action="@{/}" method="POST">
+			<input name="username" placeholder="E-mail">
+			<input name="password" placeholder="Senha" type="password">
+			<button>Entrar</button>
+		</form>
+	</div>
+</body>
+</html>

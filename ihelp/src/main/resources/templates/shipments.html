@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>iHelp - Pedidos</title>
+	<link th:href="@{~/css/reset.css}" rel="stylesheet" type="text/css"/>
+	<link th:href="@{~/css/main.css}" rel="stylesheet" type="text/css"/>
+	<link th:href="@{~/css/shipments.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<nav th:include="_template :: menu_logged" class="menu"></nav>
+	<div class="content">
+		<ul class="list">
+			<li class="item" th:each="shipment : ${shipments}">
+				<h2 class="item__header">Pedido</h2>
+				<div class="item__dispatcher">
+					<h3 class="dispatcher__title">Retirada</h3>
+					<span>Cliente: </span><span class="dispatcher__name" th:text="${shipment.dispatcher.name}"></span><br>
+					<span>Endereço: </span><span class="dispatcher__address" th:text="${shipment.dispatcher.address}"></span>
+				</div>
+				<div class="item__receiver">
+					<h3 class="receiver__title">Entrega</h3>
+					<span>Nome: </span> <span class="receiver__name" th:text="${shipment.receiver.name}"></span><br>
+					<span>Endereço: </span> <span class="receiver__address" th:text="${shipment.receiver.address}"></span>
+				</div> 
+				<div class="item__distance">
+					<h3 class="distance__title">Distância total: </h3> 
+					<span class="shipment__distance" th:text="${shipment.distance}"></span><span class="shipment__kilometers"> quilômetros</span>
+				</div>
+				<div class="item__button">
+					<a href="#" class="button">Pegar</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

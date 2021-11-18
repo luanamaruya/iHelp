@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="_template :: head"></head>
+<body>
+	<nav th:include="_template :: menu" class="menu"></nav>
+	
+	<div class="register__container">
+		<span class="title">Registro</span>
+		<form class="form" th:action="@{/register}" method="POST" th:object="${user}">
+			<input name="name" placeholder="Nome" th:field="*{name}">
+			<span class="error" th:errors="*{name}"></span>
+			<input name="cpf" id="cpf" placeholder="CPF" maxlength="14" onkeypress="cpf_mask()" th:field="*{cpf}">
+			<span class="error" th:errors="*{cpf}"></span>
+			<input name="phone" id="phone" placeholder="Telefone" onkeypress="phone_mask()" maxlength="15" th:field="*{phone}">
+			<span class="error" th:errors="*{phone}"></span>
+			<input name="email" placeholder="E-mail" th:field="*{email}">
+			<span class="error" th:errors="*{email}"></span>
+			<input name="password" type="password" placeholder="Senha" th:field="*{password}">
+			<span class="error" th:errors="*{password}"></span>
+			<button>Registrar</button>
+		</form>
+	</div>
+	
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+.message {
+	margin: 1.5rem 0;
+	text-align: center;
+	color: rgba(234,29,44,1);
+	font-size: 1.2rem;
+	font-weight: 500;
+	display: block;
+	text-shadow: 2px 2px 2px rgb(0,0,0,.05);
+}
+
+.alert {
+	text-align: center;
+	margin: 2rem auto;
+	width: 500px;
+	padding: 1.3rem 0; 
+	border-radius: 10px;
+	background-color: rgba(234,29,44,.75);
+	font-size: 1.2rem;
+	color: #FAFAFA;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+}
+
+.login__container {
+	background-color: #FFF;
+	width: 500px;
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+}
+
+.login__container .title {
+	font-size: 1.6rem;
+	color: rgba(234,29,44,1);
+	font-weight: 700;
+	text-align: center;
+	margin: 1.15rem 0;
+}
+
+.login__container .form {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.form input {
+	width: 300px;
+	margin: .55rem auto;
+	padding: .7rem .8rem;
+	border: 1.8px solid rgba(234,29,44,1);
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+.form button {
+	width: 325px;
+	margin: 1.15rem auto 2rem auto;
+	background-color: rgba(234,29,44,1);
+	color: #F7F7F7;
+	padding: .8rem 2rem;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+	border-radius: 10px;
+	border: none;
+	font-size: 1.05rem;
+	font-weight: 500;
+	cursor: pointer;
+	opacity: .9;
+	transition: 1s;
+}
+
+.form button:hover {
+	opacity: 1;
+}
+
